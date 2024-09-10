@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Movie in Cambodia - Movie Khmer Time</title>
+    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body>
+    <header>
+        <nav class="nav_box">
+            <div class="logo_img">
+                <a href="Index_Page.html"><img src="Images/Logo Color.png" alt=""></a>
+            </div>
+            <div class="nav_wall">
+            </div>
+            <div class="nav_role">
+                <div class="home">
+                    <a class="active" href="">Home</a>
+                </div>
+                <ul>
+                    <li>Movie
+                        <div class="mega_menu">
+                            <div class="inner_mega_menu">
+                                <a href="#action and adventure">Action and Advanture</a>
+                                <a href="#action">Action</a>
+                                <a href="#advanture">Advanture</a>
+                                <a href="#adult">Adult</a>
+                                <a href="#animation">Animation</a>
+                                <a href="#comedy">Comedy</a>
+                            </div>
+                            <div class="inner_mega_menu">
+                                <a href="#crime">Crime</a>
+                                <a href="#drama">Drama</a>
+                                <a href="#advanture">Family</a>
+                                <a href="#adult">Fantasy</a>
+                                <a href="#animation">History</a>
+                                <a href="#comedy">Music</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>TV - Show
+                        <div class="drop_d_m">
+                            <div class="sub_drop_d_m">
+                                <a href="#anime">Anime</a>
+                                <a href="#k-drama">K - Drama</a>
+                                <a href="#c-drama">C - Drama</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="home">
+                    <a href="About_Page.html">About</a>
+                </div>
+                <div class="home">
+                    <a href="Contact_Page.html">Contact</a>
+                </div>
+            </div>
+            <div class="serach_box">
+                <input type="text" class="input" placeholder="Search..." name="serach">
+                <button type="submit" class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="poster">
+        <div class="two_poster">
+            <img src="Images/BELTEI LOGO (smooth).gif" alt="">
+            <img src="Images/BELTEI LOGO (smooth).gif" alt="">
+        </div>
+        <div class="like_s">
+            <p>Like and Share our website to support us.</p>
+        </div><br>
+    </section>
+<!-- ! Somethings Can be Remove -->
+    <section>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="Images/Poster 2.jpg" style="width:100%">
+                <div class="text">Avengers Endgame</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="Images/poster 3.jpg" style="width:100%">
+                <div class="text">Cyberpunk Edgerunners</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="Images/Poster 1.jpg" style="width:100%">
+                <div class="text">John Wick Chapter 4</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+            }
+            </script>
+    </section>
+
+    <section class="top_movie">
+        <div class="top_role">
+            <div class="red">
+                <p>ភាពយន្កកំពុងពេញនិយម -Top Movie Popular <i class="fa-solid fa-arrow-right"></i></p>
+            </div>
+            <p class="featured">Featured</p>
+            <a href="#most_v">Most Viewed</a>
+            <a href="#most_f">Most Favorite</a>
+        </div>
+        <div class="movie_poster">
+            <ul class="p_size">
+                <img src="Images/1.jpg" alt="">
+                <img src="Images/2.jpg" alt="">
+                <img src="Images/3.jpg" alt="">
+                <img src="Images/4.jpg" alt="">
+                <img src="Images/5.jpg" alt="">
+                <img src="Images/6.jpg" alt="">
+                <img src="Images/7.jpg" alt="">
+                <img src="Images/8.jpg" alt="">
+            </ul>
+        </div>
+    </section>
+    <section class="top_movie">
+        <div class="top_role">
+            <div class="red">
+                <p>Recently Added Movie ភាពយន្តទើបតែបញ្ចូលថ្មីៗ <i class="fa-solid fa-arrow-right"></i></p>
+            </div>
+            <!-- <p class="featured">Featured</p>
+            <a href="#most_v">Most Viewed</a>
+            <a href="#most_f">Most Favorite</a> -->
+        </div>
+        <div class="movie_poster">
+            <ul class="p_size">
+                <img src="Images/9.jpg" alt="">
+                <img src="Images/10.jpg" alt="">
+                <img src="Images/11.jpg" alt="">
+                <img src="Images/12.jpg" alt="">
+                <img src="Images/13.jpg" alt="">
+                <img src="Images/14.jpg" alt="">
+                <img src="Images/15.jpg" alt="">
+                <img src="Images/16.jpg" alt="">
+            </ul>
+        </div>
+    </section>
+    <section class="top_movie">
+        <div class="top_role">
+            <div class="red">
+                <p>TV Series - ភាពយន្តជារឿងភាគ <i class="fa-solid fa-arrow-right"></i></p>
+            </div>
+            <!-- <p class="featured">Featured</p>
+            <a href="#most_v">Most Viewed</a>
+            <a href="#most_f">Most Favorite</a> -->
+        </div>
+        <div class="movie_poster">
+            <ul class="p_size">
+                <img src="Images/17.jpg" alt="">
+                <img src="Images/18.jpg" alt="">
+                <img src="Images/19.jpg" alt="">
+                <img src="Images/20.jpg" alt="">
+                <img src="Images/21.jpg" alt="">
+                <img src="Images/22.jpg" alt="">
+                <img src="Images/23.jpg" alt="">
+                <img src="Images/24.jpg" alt="">
+            </ul>
+        </div>
+    </section>
+    <div class="ads_b">
+        <div class="f_ads">
+            <img src="Images/BELTEI LOGO (smooth).gif" alt="">
+        </div>
+        <div class="s_ads">
+            <img src="Images/BELTEI LOGO (smooth).gif" alt="">
+        </div>
+        <div>
+            
+        </div>
+    </div>
+    <!-- <section class="about">
+            <div class="role">
+                <p><span>- Tep Sophal:</span> Code Writer</p>
+                <p><span>- Phean Nadanich:</span> Website Ideas</p>
+                <p><span>- Ly Chantha:</span> Explainer / Presenter</p>
+                <p><span>- Lim Vanda:</span> Explainer / Presenter</p>
+                <p><span>- Kao Luyhapp:</span> Additional Ideas</p>
+            </div>
+            <div class="text">
+                <h2>About</h2>
+                <p>-The Website <span>"Movie Khmer Time"</span> is an Movie Website which you can watch every types and variety of movie combine in one place. You can enjoy and chill with your friends and family. Our Site have new and old movie, recent movie, popular movie, and many series such as TV show and Anime or Animation. Come and watch movie at our Site for FREE!!!</p>
+            </div>
+    </section>
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <div class="form">
+            <p>
+                We'd love to hear from you! If you have any questions, suggestions, or feedback, please don't hesitate to reach out.
+            </p><br>
+            <form action="submit_form.php" method="post"> Replace with your form handling script
+                <label for="name">Name:</label><br>
+                <input type="text" class="name" name="name" required placeholder="Name..."><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" class="name" name="email" required placeholder="Gmail..."><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <input type="submit" value="Send Message" class="message">
+            </form>
+        </div>
+    </section> -->
+    <footer class="footer">
+        <div class="f_contact">
+            <img src="Images/Footer 2.png" alt="">
+        </div>
+        <div class="footer_logo">
+            <img src="Images/Logo Color.png" alt="">
+        </div>
+        <div class="f_text">
+            <p><span>Movie Khmer Time</span> ជាគេហទំព័រ ខ្មែរមួយដែលចេញពីការស្រឡាញ់ភាពយន្តរបស់អ្នកបង្កើត Website នេះពិតៗ បងប្អូននឹងមានទំនុកចិត្តក្នុងការកម្សាន្តភាពយន្តដោយសេរី មិនគិតប្រាក់ ព្រោះម្ចាស់ Website នេះបង្កើតវាឡើងគ្មានក្នុងគោលបំណងជាប្រយោជន៍ផ្ទាល់ខ្លួនគិតតែពីលុយៗៗ នឹង បំផ្លាញគេ ដូច Website បង្កប់មេរោគ ផ្សេងៗដែលយកឈ្មោះជា website ខ្មែរមកទាញប្រយោជន៍ពីអ្នកមើលឡើយ និយាយទៅគឺគ្មានបេះដូងសុទ្ធតែជាការសម្តែង សូមចងចាំថា KhFullHD ប្រើ Domain យកពាក្យ Kh ផ្ដើមមុន ដាច់ខាតមិនយកពាក្យ Kh មកដាក់ចុងក្រោយដូចគេដ៏ទៃឡើយ (ប្រយោជន៍រួមជាធំមិនកេងបន្លំអូសប្រយោជន៍ផ្ទាល់ខ្លួន)</p>
+        </div>
+    </footer>
+</body>
+</html>
