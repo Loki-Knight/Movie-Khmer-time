@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Movie in Cambodia - Movie Khmer Time</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(25, 25, 25);
+        }
+        /* .bg_img img{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-position: center;
+            background-size: cover;
+        } */
+        .bg_img{
+            width: 100%;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-position: center;
+            background-size: cover;
+            background-image: linear-gradient(0deg , rgba(0, 0, 0, 0.777), rgb(25, 25, 25)), url(Images/photo_2024-08-04_10-55-42.jpg);
+            position: relative;
+            color: white;
+        }
+        .bg_img tr{
+            position: absolute;
+            top: 410px;
+            left: 19%;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            /* font-weight: bolder; */
+        }
+        .bg_img tr a{
+            text-decoration: none;
+            color: gray;
+        }
+        .bg_img tr a:hover{
+            color: white;
+            font-weight: bolder;
+        }
+        .bg_img tr td:first-child{
+            font-weight: bolder;
+        }
+        .bg_img td{
+            padding-right: 10px;
+        }
+        .logo_img{
+            position: absolute;
+            top: 220px;
+            left: 18%;
+        }
+        .serach_box{
+            position: absolute;
+            left: 18%;
+            top: 310px;
+            width: 650px;
+            height: 60px;
+            border-radius: 100px;
+        }
+        .serach_box .input{
+            position: relative;
+            border: 0;
+            outline: none;
+            color: black;
+            background-color: white;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 100px;
+        }
+        .serach_box .btn{
+            position: absolute;
+            background-color: white;
+            top: 0;
+            right: 0;
+            width: 85px;
+            height: 100%;
+            outline: none;
+            border: none;
+            border-radius: 100px;
+            /* background-color: rgb(88, 234, 88); */
+            background-color: gold;
+            font-size: 25px;
+        }
+        .serach_box .btn:hover{
+            /* background-color: lightgreen; */
+            background-color: rgb(255, 222, 36);
+        }
+        .fa-magnifying-glass{ /* Can Change Font Color */
+            /* color: white;  */
+            color: black;
+        }
+        .pic_1{
+            position: absolute;
+            top: 140px;
+            right: 380px;
+        }
+        .go_sites a{ /* Change Color 2.Red 3.Gold */
+            /* background-color: rgb(88, 234, 88); */
+            /* background-color: red; */
+            background-color: gold;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            /* Can Change Font Color */
+            color: black; 
+            /* color: white; */
+            width: 1214px;
+            height: 65px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+            font-size: 24px;
+            font-weight: bolder;
+            margin-bottom: 80px;
+        }
+        .go_sites a:hover{ /* Change Color 2.Red 3.Gold */
+            /* background-color: rgb(96, 255, 96); */
+            /* background-color: rgb(255, 39, 39); */
+            background-color: rgb(255, 222, 35);
+        }
+        .ads_b{
+            background-color: white;
+            width: 1214px;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .f_ads img{
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            top: 0;
+            left: 0;
+            height: 90px;
+            width: 607px;
+        }
+        .s_ads img{
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            top: 0;
+            right: 0;
+            height: 90px;
+            width: 607px;
+        }
+        .share{
+            background-color: black;
+            width: 1214px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            margin: auto;
+            color: white;
+            padding: 15px 15px;
+            font-size: 14px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            box-shadow: 5px 5px 10px #000000ae;
+            margin-bottom: 40px;
+        }
+        .share .wall{
+            /* background-color: rgb(88, 234, 88); */
+            background-color: yellow;
+            height: 45px;
+            width: 2px;
+            margin-right: 15px;
+        }
+        .footer{
+            width: 100%;
+            height: 310px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-position: center;
+            background-size: cover;
+            background-image: linear-gradient(0deg , rgba(0, 0, 0, 0.783), rgb(20, 20, 20)), url(Images/Footer.jpg);
+            position: relative;
+            color: white;
+        }
+        .f_box{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0%;
+            padding: 0%;
+        }
+        .f_logo{
+            position: absolute;
+            left: 6%;
+            top: 30px;
+        }
+        .f_wall{
+            position: absolute;
+            background-color: rgb(70, 70, 70);
+            height: 45px;
+            width: 2px;
+            left: 370px;
+            top: 22px;
+        }
+        .f_social{
+            position: absolute;
+            top: 25px;
+            left: 400px;
+            color: rgb(96, 96, 96);
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .f_social .fa-brands{
+            color:  rgb(70, 70, 70);
+        }
+        .fa-facebook{
+            font-size: 30px;
+            position: absolute;
+            top: 3px;
+            left: 50px;
+        }
+        .fa-telegram{
+            font-size: 31px;
+            position: absolute;
+            top: 3px;
+            left: 90px;
+        }
+        .fa-youtube{
+            font-size: 30px;
+            position: absolute;
+            top: 3px;
+            left: 130px;
+        }
+        .fa-facebook:hover{
+            color: rgb(39, 70, 244);
+        }
+        .fa-telegram:hover{
+            color: rgb(21, 204, 255);
+        }
+        .fa-youtube:hover{
+            color: red;
+        }
+        hr{
+            width: 448px;
+            position: absolute;
+            left: 6%;
+            top: 90px;
+            background-color: rgb(96, 96, 96);
+        }
+        .az_list{
+            position: absolute;
+            left: 6%;
+            top: 125px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .az_list p{
+            margin-inline-end: 20px;
+        }
+        .az_list p:first-child{
+            font-size: larger;
+            font-weight: bolder;
+        }
+        .f_wall2{
+            background-color: rgb(70, 70, 70);
+            height:25px;
+            width: 2px;
+            margin-inline-end: 20px;
+        }
+        .a_z{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            left: 6%;
+            top: 170px;
+        }
+        .a_z a{
+            border-radius: 3px;
+            padding: 5px 10px;
+            background-color: rgb(70, 70, 70);
+            text-decoration: none;
+            color:white;
+            margin-inline: 3px;
+        }
+        .mkt{
+            position: absolute;
+            left: 6%;
+            bottom: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(135, 135, 135);
+        }
+        .mkt p:first-child{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="bg_img">
+            <!-- <img src="Images/photo_2024-08-04_10-55-42.jpg" alt=""> -->
+            <!-- <p><span style="font-weight: bolder;">Top Search:</span> <span style="color: gray;">Deadpool and Wolverine, John Wich 4, Iron Man 3</span></p> -->
+            <table>
+                <tr>
+                    <td>Top Search:</td>
+                    <td><a href="#dp3">Deadpool and Wolverine</a></td>
+                    <td><a href="#jw4">John Wich 4</a></td>
+                    <td><a href="#nwh">Spider-man No Way Home</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="logo_img">
+            <!-- ! Can Chnage Logo 1.white to 2.Color -->
+            <!-- <img width="430px" src="Images/Logo.png" alt=""> -->
+            <img width="430px" src="Images/Logo Color.png" alt="">
+        </div>
+        <div class="pic_1">
+            <img style="width: 450px;" src="Images/deadpoolandwolverine-removebg-preview (1).png" alt="">
+        </div>
+    </div>
+    <div class="serach_box">
+        <input type="text" class="input" placeholder="Search..." name="serach">
+        <button type="submit" class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+    <!-- <div class="pic_1">
+        <img src="Images/deadpoolandwolverine-removebg-preview (1).png" alt="">
+    </div> -->
+    
+    <center><div class="go_sites">
+        <a href="Home_Page.html">View Full Site <span style="font-family: Khmer OS Battambang; margin-inline: 10px;">ចូលគេហទំព័រទាំងមូល</span><i class="fa-solid fa-square-arrow-up-right"></i></a>
+    </div></center>
+    <div class="ads_b">
+        <div class="f_ads">
+            <img src="Images/BELTEI LOGO (smooth).gif" alt="">
+        </div>
+        <div class="s_ads">
+            <img src="Images/BELTEI LOGO (smooth).gif" alt="">
+        </div>
+        <div>
+            
+        </div>
+    </div>
+    <div class="share">
+        <div class="wall">
+        </div>
+        <div class="text_sh">
+            <table>
+                <tr><p style="color: yellow;">Share Movie Khmer Time</p></tr>
+                <!-- <tr><p style="color: rgb(88, 234, 88) ;">Share Movie Khmer Time</p></tr> -->
+                <tr><p>To Your Friends</p></tr>
+            </table>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="f_box">
+            <div class="f_logo">
+                <!-- ! Can Chnage Logo 1.white to 2.Color -->
+                <!-- <img style="width: 200px;" src="Images/Logo.png" alt=""> -->
+                <img style="width: 200px;" src="Images/Logo Color.png" alt="">
+            </div>
+            <div class="f_wall">                
+            </div>
+            <div class="f_social">
+                <table>
+                    <tr><p>Join</p></tr>
+                    <tr>
+                        <p>Now</p>
+                        <td><a href=""><i class="fa-brands fa-facebook"></i></a></td>
+                        <td><a href=""><i class="fa-brands fa-telegram"></i></a></td>
+                        <td><a href=""><i class="fa-brands fa-youtube"></i></a></td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
+        <hr>
+        <div class="az_list">
+            <div style="display: flex;">
+                <p>AZ-List</p>
+                <div class="f_wall2">                
+                </div>
+                <p>Searching anime order by alphabet name A to Z.</p>
+            </div>
+        </div>
+        <div class="a_z">
+            <a href="#all">ALL</a>
+            <a href="#all">0 - 9</a>
+            <a href="#a">A</a>
+            <a href="#b">B</a>
+            <a href="#c">C</a>
+            <a href="#d">D</a>
+            <a href="#e">E</a>
+            <a href="#f">F</a>
+            <a href="#g">G</a>
+            <a href="#h">H</a>
+            <a href="#i">I</a>
+            <a href="#j">J</a>
+            <a href="#k">K</a>
+            <a href="#l">L</a>
+            <a href="#m">M</a>
+            <a href="#n">N</a>
+            <a href="#o">O</a>
+            <a href="#p">P</a>
+            <a href="#q">Q</a>
+            <a href="#r">R</a>
+            <a href="#s">S</a>
+            <a href="#t">T</a>
+            <a href="#u">U</a>
+            <a href="#v">V</a>
+            <a href="#w">W</a>
+            <a href="#x">X</a>
+            <a href="#y">Y</a>
+            <a href="#z">Z</a>
+        </div>
+        <div class="mkt">
+            <p>MOVIE KHMER TIME</p><br>
+            <p>ពួកយើងសុទ្ធតែជា website ឯកជន លក្ខណៈគ្រួសារ ដូចនេះបងប្អូនដែលចូលទស្សនាគឺសុទ្ធតែចូលរួមក្លាយជាគ្រួសារតែមួយនៃគ្រួសារ អ្នកនាំរឿង</p>
+        </div>
+    </footer>
+</body>
+</html>
